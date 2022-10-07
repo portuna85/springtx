@@ -22,10 +22,8 @@ public class MemberRepository {
     }
 
     public Optional<Member> find(String username) {
-
         return em.createQuery("SELECT m FROM Member m WHERE m.username = :username", Member.class)
                 .setParameter("username", username)
                 .getResultList().stream().findAny();
-
     }
 }
