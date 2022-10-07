@@ -1,6 +1,7 @@
 package hello.springtx.propagation;
 
 import lombok.extern.slf4j.Slf4j;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -49,6 +50,7 @@ class MemberServiceTest {
     }
 
     @Test
+    @DisplayName("싱글트랜잭션")
     void singleTx() {
         // given
         String username = "singleTx";
